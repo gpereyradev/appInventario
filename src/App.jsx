@@ -1,96 +1,76 @@
-import {
-  BrowserRouter as Router,
-  Navigate,
-  NavLink,
-  Route,
-  Routes,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
-import Login from "./components/Login/Login";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import CrudProductos from "./assets/components/Productos/crudProductos";
-import Icon from "./components/UI/Icon";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { AuthProvider, DataProvider, ToastProvider } from "./lib/Providers";
+import { useAuth } from "./lib/context";
+import { ErrorPanel, Loading } from "./components/ui/Shared";
+import Shell from "./components/Shell";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Products from "./pages/Products";
+import Entities from "./pages/Entities";
+import Kardex from "./pages/Kardex";
+import Alerts from "./pages/Alerts";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
 import "./App.css";
-
-function Navigation() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const token = localStorage.getItem("token");
-  const esPanel = location.pathname === "/productos" && token;
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/", { replace: true });
-  };
-
-  return (
-    <nav
-      className={
-        esPanel ? "navigation navigation-panel" : "navigation navigation-login"
-      }
-      aria-label="Navegación principal"
-    >
-      <div className="navigation-top">
-        <NavLink
-          className="brand"
-          to={esPanel ? "/productos" : "/"}
-          aria-label="SENATI Inventario, inicio"
-        >
-          <span className="brand-symbol">
-            <Icon name="box" size={24} />
-          </span>
-          <span>
-            <strong>
-              inventario<span className="brand-period">.</span>
-            </strong>
-            <small>SENATI · GESTIÓN DE PRODUCTOS</small>
-          </span>
-        </NavLink>
-        {esPanel && <span className="workspace-label">ESPACIO DE TRABAJO</span>}
-        {esPanel && (
-          <NavLink to="/productos" className="sidebar-link">
-            <Icon name="box" size={20} />
-            <span>Productos</span>
-            <span className="nav-dot" />
-          </NavLink>
-        )}
-      </div>
-      {esPanel ? (
-        <div className="navigation-bottom">
-          <span className="session-label">
-            <span /> Sesión activa
-          </span>
-          <button className="logout-button" onClick={handleLogout}>
-            <Icon name="logout" size={18} />
-            <span>Cerrar sesión</span>
-          </button>
-        </div>
-      ) : (
-        <span className="navigation-caption">
-          <span /> Simple. Claro. Organizado.
-        </span>
-      )}
-    </nav>
+function Protected() {
+  const { user } = useAuth();
+  return user ? (
+    <DataProvider key={user.id}>
+      <Shell />
+    </DataProvider>
+  ) : (
+    <Navigate to="/login" replace />
   );
 }
-
+function AppRoutes() {
+  const { loading, error, retry } = useAuth();
+  if (loading)
+    return (
+      <div className="boot">
+        <Loading />
+      </div>
+    );
+  if (error)
+    return (
+      <div className="boot">
+        <ErrorPanel message={error} retry={retry} />
+      </div>
+    );
+  return (
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route element={<Protected />}>
+        <Route index element={<Dashboard />} />
+        <Route path="productos" element={<Products />} />
+        <Route
+          path="categorias"
+          element={<Entities key="categorias" kind="categorias" />}
+        />
+        <Route
+          path="proveedores"
+          element={<Entities key="proveedores" kind="proveedores" />}
+        />
+        <Route
+          path="usuarios"
+          element={<Entities key="usuarios" kind="usuarios" />}
+        />
+        <Route path="kardex" element={<Kardex />} />
+        <Route path="alertas" element={<Alerts />} />
+        <Route path="reportes" element={<Reports />} />
+        <Route path="configuracion" element={<Settings />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Route>
+    </Routes>
+  );
+}
 export default function App() {
   return (
-    <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route
-          path="/productos"
-          element={
-            <ProtectedRoute>
-              <CrudProductos />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </Router>
+    <BrowserRouter>
+      <ToastProvider>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </ToastProvider>
+    </BrowserRouter>
   );
 }
