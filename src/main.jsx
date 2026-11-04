@@ -5,8 +5,13 @@ import "@fontsource/dm-sans/latin-500.css";
 import "@fontsource/dm-sans/latin-600.css";
 import "@fontsource/dm-sans/latin-700.css";
 import "@fontsource/dm-sans/latin-800.css";
+import "@fontsource/manrope/latin-600.css";
+import "@fontsource/manrope/latin-700.css";
+import "@fontsource/manrope/latin-800.css";
 import "./index.css";
 import App from "./App.jsx";
+document.documentElement.dataset.theme =
+  localStorage.getItem("inventra-theme-v2") || "dark";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />

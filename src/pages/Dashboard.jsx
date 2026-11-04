@@ -11,6 +11,8 @@ export default function Dashboard() {
   const { user } = useAuth();
   const [create, setCreate] = useState(false);
   const s = data.dashboard;
+  const healthy = s.total_productos - s.bajo_stock.length;
+  const healthyShare = s.total_productos ? healthy / s.total_productos : 0;
   const max = Math.max(1, ...s.por_categoria.map((c) => c.unidades));
   return (
     <>
@@ -83,6 +85,38 @@ export default function Dashboard() {
             <Badge kind={s.bajo_stock.length ? "warning" : "positive"}>
               {s.bajo_stock.length ? "Por reponer" : "En orden"}
             </Badge>
+          </div>
+          <div className="stock-health">
+            <div className="health-ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true">
+                <circle
+                  className="health-ring-track"
+                  cx="40"
+                  cy="40"
+                  r="33"
+                  fill="none"
+                  strokeWidth="4"
+                />
+                <circle
+                  className="health-ring-fill"
+                  cx="40"
+                  cy="40"
+                  r="33"
+                  fill="none"
+                  strokeWidth="4"
+                  strokeDasharray={`${healthyShare * 207.345} 207.345`}
+                />
+              </svg>
+              <strong>{Math.round(healthyShare * 100)}%</strong>
+            </div>
+            <div>
+              <strong>Stock saludable</strong>
+              <small>
+                {healthy} de {s.total_productos} productos
+                <br />
+                por encima del mínimo.
+              </small>
+            </div>
           </div>
           {s.bajo_stock.length ? (
             <div className="replenish-list">

@@ -1,33 +1,29 @@
-# Inventra: decisiones de interfaz
+# Inventra: frontend basado en la referencia visual
 
-La pregunta principal del resumen es: ¿qué necesita atención en el almacén? El valor al costo, las existencias y la reposición proceden de los productos activos; no hay indicadores comerciales inventados.
+La referencia proporcionada el 4 de noviembre de 2026 muestra una interfaz Rolve sobre fondo carbón, con ventanas delineadas, tipografía blanca, controles violetas, navegación en dos niveles y grandes arcos lima. Esta versión aplica esa dirección a Inventra desde el login hasta sus nueve apartados.
 
-Se aplicó UI/UX Pro Max. La búsqueda de sistema `inventory management dashboard` devolvió Flat Design, con gris industrial y verde de stock. Su tipografía académica no correspondía a una herramienta de trabajo; una búsqueda específica `industrial dashboard sans` devolvió DM Sans, ya disponible en el proyecto. Se usa una sola familia alojada en el propio sitio.
+## Decisiones visuales
 
-La composición usa una hoja blanca sobre un marco verde gris, navegación neutra, líneas discretas y color reservado para stock, alertas y actividad. El símbolo de Inventra combina una caja con una línea de recorrido; la reposición es el elemento principal que une productos y Kardex. El login muestra un dibujo vectorial del almacén, sin imágenes externas.
+- Fondo carbón `#1e1e1e`, paneles `#222222` y superficies elevadas `#292929`.
+- Acciones principales violeta `#6748ee`, texto blanco y datos destacados en lima `#ddf44c`.
+- Manrope para títulos y cifras principales; DM Sans para tablas, formularios y navegación. Ambas familias se sirven desde el propio sitio.
+- Un carril de accesos rápidos de 62 px junto a la navegación contextual de 208 px. En celular se convierte en un menú plegable con gestión del foco, cierre por Escape y navegación por teclado.
+- Login con título contorneado, arcos SVG y formulario dentro de una ventana delineada. El panel de trazabilidad mantiene el mismo lenguaje visual y respeta el área útil del formulario.
+- Color concentrado en botones, alertas y cifras. Sin degradados ni efectos de cristal.
+- El modo oscuro se activa por defecto. Se conserva un modo claro alternativo y su preferencia se guarda con la clave `inventra-theme-v2`.
 
-## Vistas
+La composición de partida fue True-black flat, con shell Ruled T-frame (semilla 1114944357). La referencia del usuario tiene prioridad sobre las preferencias generales: se utilizan expresamente violeta, arcos lima y bordes visibles. Los arcos se reservan al acceso; las pantallas operativas priorizan los datos.
 
-| Vista         | Pregunta que resuelve                     |
-| ------------- | ----------------------------------------- |
-| Resumen       | ¿Qué requiere atención hoy?               |
-| Productos     | ¿Qué existe y cuánto queda?               |
-| Categorías    | ¿Cómo está organizado el catálogo?        |
-| Proveedores   | ¿Quién suministra cada producto?          |
-| Kardex        | ¿Por qué cambió el stock y quién lo hizo? |
-| Alertas       | ¿Qué debo reponer y cuánto costaría?      |
-| Reportes      | ¿Cuánto vale el stock actual?             |
-| Usuarios      | ¿Quién puede acceder y con qué permisos?  |
-| Configuración | ¿Cómo actualizo mi perfil y contraseña?   |
+## Datos y funciones
 
-## Accesibilidad y estados
+El porcentaje de stock saludable se calcula como `(productos activos - productos por reponer) / productos activos`. No hay porcentajes comerciales inventados. Ante un catálogo vacío se muestra 0 % y las vistas conservan sus estados vacíos.
 
-- Etiquetas visibles, foco de teclado, cuadros de diálogo nativos y validación del servidor.
-- Indicadores con texto y signo; el color no es la única señal.
-- Navegación plegable, filtros adaptables, tablas desplazables dentro de su contenedor.
-- Tema claro y oscuro, movimiento reducido, mensajes de carga, error y ausencia de datos.
-- Formulario de stock separado de la ficha del producto para conservar trazabilidad.
+Se conservan React Router, la sesión HttpOnly, los roles y los flujos de productos, categorías, proveedores, Kardex, alertas, reportes, usuarios y configuración. El cambio del backend se limita a fijar el nuevo commit del frontend para su despliegue integrado.
 
-Los 15 productos, 6 categorías, 3 proveedores y movimientos iniciales son datos de demostración, no un inventario importado del equipo local. Los proveedores de ejemplo usan dominios `.example`.
+## Validación
 
-La verificación visual se ejecutó a 1440, 768, 390 y 375 px. La sombra se reserva al aviso flotante; los guiones largos de las tablas indican ausencia de datos. Las tablas conservan el desplazamiento interno para comparar todas las columnas sin reducir el texto.
+La revisión visual usa una copia de solo lectura de los datos de la API publicada y un servidor aislado para comprobar la interfaz. No escribe productos, usuarios ni movimientos en producción.
+
+Se revisan login, nueve vistas, búsqueda, paginación, exportación CSV, apertura y cierre de formularios, prevención de una salida superior al stock, cambio y persistencia de tema, navegación móvil y tamaños 1440, 1024, 768, 390 y 375 px. Las reglas de contraste y tipografía se comprueban con los analizadores de DOM del diseño; la excepción `palette-purple` corresponde a un color solicitado expresamente por el usuario.
+
+Resultado de la revisión: 36 comprobaciones funcionales aprobadas y ningún error de JavaScript. Sin desbordamiento de página en los tamaños revisados. El resumen de escritorio no presenta hallazgos; los avisos restantes en tablet/celular se refieren a los metadatos de 12 px y a la detección automática de cifras como títulos, con contenido revisado visualmente.

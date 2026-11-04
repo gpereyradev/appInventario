@@ -27,177 +27,188 @@ export default function Login() {
   }
   return (
     <div className="login-page">
-      <section className="login-story">
+      <header className="login-nav">
         <Brand />
-        <div className="login-visual" aria-hidden="true">
-          <svg viewBox="0 0 600 390" fill="none">
-            <path
-              d="m85 240 215 118 215-118-215-119L85 240Z"
-              className="visual-base"
+        <span className="login-nav-label">Un lugar. Todo tu inventario.</span>
+        <span className="login-nav-status">
+          <span /> Listo para trabajar
+        </span>
+      </header>
+      <main className="login-layout">
+        <section className="login-story">
+          <div className="login-story-copy">
+            <span className="outline-title" aria-hidden="true">
+              Inventario.
+            </span>
+            <h2>
+              Todo conectado.
+              <br />
+              Todo en orden.
+            </h2>
+            <p>
+              Productos, personas y movimientos.
+              <br />
+              El control de tu almacén empieza aquí.
+            </p>
+            <div className="login-feature-line">
+              <span>
+                <Icon name="box" size={16} /> Organiza
+              </span>
+              <span>
+                <Icon name="arrows" size={16} /> Controla
+              </span>
+              <span>
+                <Icon name="chart" size={16} /> Decide
+              </span>
+            </div>
+          </div>
+          <div className="login-signature">
+            <span className="signature-symbol">
+              <Icon name="arrows" size={26} />
+            </span>
+            <div>
+              De la primera entrada
+              <br />
+              <strong>al último movimiento.</strong>
+            </div>
+          </div>
+        </section>
+        <section className="login-scene" aria-label="Inicio de sesión">
+          <svg
+            className="login-orbits"
+            viewBox="0 0 1000 1000"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="510"
+              cy="510"
+              r="445"
+              stroke="currentColor"
+              strokeWidth="35"
             />
-            <path
-              d="M85 240v16l215 119 215-119v-16M300 358v17"
-              className="visual-edge"
+            <circle
+              cx="510"
+              cy="510"
+              r="351"
+              stroke="currentColor"
+              strokeWidth="35"
             />
-            <g className="visual-box box-one">
-              <path
-                d="m157 180 89 49 89-49-89-49-89 49Z"
-                fill="var(--box-top)"
-              />
-              <path d="m157 180 89 49v88l-89-49v-88Z" fill="var(--box-left)" />
-              <path d="m246 229 89-49v88l-89 49v-88Z" fill="var(--box-right)" />
-              <path
-                d="m200 156 89 49v34"
-                stroke="var(--box-tape)"
-                strokeWidth="15"
-              />
-              <path
-                d="m171 240 34 19m-34-7 20 11"
-                stroke="var(--box-tape)"
-                strokeWidth="3"
-              />
-            </g>
-            <g className="visual-box">
-              <path
-                d="m310 156 65 36 65-36-65-36-65 36Z"
-                fill="var(--box-top)"
-              />
-              <path d="m310 156 65 36v65l-65-36v-65Z" fill="var(--box-left)" />
-              <path d="m375 192 65-36v65l-65 36v-65Z" fill="var(--box-right)" />
-              <path
-                d="m343 138 65 36v26"
-                stroke="var(--box-tape)"
-                strokeWidth="11"
-              />
-            </g>
-            <g>
-              <path
-                d="m220 81 65 36 65-36-65-36-65 36Z"
-                fill="var(--box-top)"
-              />
-              <path d="m220 81 65 36v65l-65-36V81Z" fill="var(--box-left)" />
-              <path d="m285 117 65-36v65l-65 36v-65Z" fill="var(--box-right)" />
-              <path
-                d="m253 63 65 36v26"
-                stroke="var(--box-tape)"
-                strokeWidth="11"
-              />
-              <path
-                d="m232 129 21 12"
-                stroke="var(--box-tape)"
-                strokeWidth="3"
-              />
-            </g>
-            <path
-              d="M129 183v-55l40-22M440 277l43-24v-35M274 27l20-11 21 11"
-              stroke="var(--visual-line)"
-              strokeWidth="2"
+            <circle
+              cx="510"
+              cy="510"
+              r="258"
+              stroke="currentColor"
+              strokeWidth="35"
             />
           </svg>
-          <div className="visual-label label-top">
-            <span className="status-dot" /> Todo en su lugar
-          </div>
-          <div className="visual-label label-bottom">
-            <Icon name="check" size={16} /> Inventario bajo control
-          </div>
-        </div>
-        <div className="story-copy">
-          <span className="story-index">Menos desorden. Más control.</span>
-          <h2>
-            Tu inventario,
-            <br />
-            con todo en orden.
-          </h2>
-          <p>
-            Del primer producto al último movimiento.
-            <br />
-            Un solo lugar para gestionar tu almacén.
-          </p>
-        </div>
-        <div className="story-footer">
-          <span>Hecho para trabajar mejor.</span>
-          <span>Inventario · Kardex · Reportes</span>
-        </div>
-      </section>
-      <main className="login-main">
-        <div className="login-top">
-          <span>Gestión de inventario</span>
-          <span className="mini-status">
-            <span /> Acceso seguro
-          </span>
-        </div>
-        <div className="login-form-wrap">
-          <div className="login-heading">
-            <span className="login-welcome">Tu espacio de trabajo</span>
-            <h1>Todo empieza aquí.</h1>
-            <p>Ingresa a tu cuenta y retoma el control.</p>
-          </div>
-          <form onSubmit={submit}>
-            <Field label="Correo electrónico">
-              <input
-                type="email"
-                autoComplete="username"
-                placeholder="nombre@correo.com"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                maxLength={254}
-              />
-            </Field>
-            <Field label="Contraseña">
-              <div className="password-field">
-                <input
-                  type={visible ? "text" : "password"}
-                  autoComplete="current-password"
-                  placeholder="Ingresa tu contraseña"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <button
-                  type="button"
-                  aria-label={
-                    visible ? "Ocultar contraseña" : "Mostrar contraseña"
-                  }
-                  aria-pressed={visible}
-                  className="icon-button"
-                  onClick={() => setVisible(!visible)}
-                >
-                  <Icon name="eye" size={19} />
+          <div className="login-form-window">
+            <div className="window-toolbar">
+              <div className="window-dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </div>
+              <span>Mi espacio de trabajo</span>
+              <Icon name="lock" size={14} />
+            </div>
+            <div className="login-form-wrap">
+              <div className="login-heading">
+                <span className="login-welcome">Bienvenido a Inventra</span>
+                <h1>Accede a tu almacén.</h1>
+                <p>Ingresa tus datos para continuar.</p>
+              </div>
+              <form onSubmit={submit}>
+                <Field label="Correo electrónico">
+                  <input
+                    type="email"
+                    autoComplete="username"
+                    placeholder="nombre@correo.com"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    maxLength={254}
+                  />
+                </Field>
+                <Field label="Contraseña">
+                  <div className="password-field">
+                    <input
+                      type={visible ? "text" : "password"}
+                      autoComplete="current-password"
+                      placeholder="Ingresa tu contraseña"
+                      required
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button
+                      type="button"
+                      aria-label={
+                        visible ? "Ocultar contraseña" : "Mostrar contraseña"
+                      }
+                      aria-pressed={visible}
+                      className="icon-button"
+                      onClick={() => setVisible(!visible)}
+                    >
+                      <Icon name="eye" size={19} />
+                    </button>
+                  </div>
+                </Field>
+                {error && (
+                  <div className="form-error" role="alert">
+                    {error}
+                  </div>
+                )}
+                <button className="button primary login-submit" disabled={busy}>
+                  {busy ? (
+                    <>
+                      <span className="spinner" /> Ingresando…
+                    </>
+                  ) : (
+                    <>
+                      Iniciar sesión <Icon name="arrow" size={19} />
+                    </>
+                  )}
                 </button>
+                <p className="login-help">
+                  <Icon name="shield" size={14} /> Acceso seguro para tu equipo.
+                </p>
+              </form>
+              <div className="login-support">
+                <strong>¿Necesitas una cuenta?</strong>
+                <p>Solicita acceso al administrador de tu almacén.</p>
               </div>
-            </Field>
-            {error && (
-              <div className="form-error" role="alert">
-                {error}
-              </div>
-            )}
-            <button className="button primary login-submit" disabled={busy}>
-              {busy ? (
-                <>
-                  <span className="spinner" /> Ingresando…
-                </>
-              ) : (
-                <>
-                  Iniciar sesión <Icon name="arrow" size={19} />
-                </>
-              )}
-            </button>
-            <p className="login-help">
-              <Icon name="lock" size={14} /> Solo el personal autorizado puede
-              ingresar.
-            </p>
-          </form>
-          <div className="login-support">
-            <strong>¿Necesitas acceso?</strong>
-            <p>Solicita una cuenta al administrador de tu almacén.</p>
+            </div>
           </div>
-        </div>
-        <footer className="login-footer">
-          <span>Inventra · Gestión que conecta.</span>
-          <span>Por Guillermo Pereyra</span>
-        </footer>
+          <aside className="trace-preview">
+            <div>
+              <span className="trace-signal" />
+              <strong>Trazabilidad completa</strong>
+              <Icon name="check" size={16} />
+            </div>
+            <p>
+              Un producto. Cada movimiento.
+              <br />
+              Una historia que siempre puedes consultar.
+            </p>
+            <div className="trace-tags">
+              <span>
+                Entrada <Icon name="in" size={13} />
+              </span>
+              <span>
+                Salida <Icon name="out" size={13} />
+              </span>
+              <span>
+                Ajuste <Icon name="arrows" size={13} />
+              </span>
+            </div>
+          </aside>
+        </section>
       </main>
+      <footer className="login-footer">
+        <span>Inventra · Gestión de inventario</span>
+        <span>Diseñado para tenerlo claro.</span>
+        <span>Por Guillermo Pereyra</span>
+      </footer>
     </div>
   );
 }
