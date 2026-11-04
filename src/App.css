@@ -13,7 +13,7 @@
   color: var(--text);
 }
 .brand-word > span {
-  font-size: 11px;
+  font-size: 12px;
   vertical-align: super;
   margin-left: 3px;
   letter-spacing: 0;
@@ -137,7 +137,7 @@
   width: 31px;
   height: 33px;
   border-radius: 5px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 .workspace > div {
@@ -151,12 +151,12 @@
   font-weight: 600;
 }
 .workspace div > span {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 .nav-group {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   padding: 0 12px;
   margin: 0 0 10px;
@@ -190,7 +190,7 @@
 }
 .nav-count {
   margin-left: auto;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--warning);
   font-weight: 600;
 }
@@ -214,7 +214,7 @@
   height: 35px;
   background: var(--active);
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text);
   flex-shrink: 0;
@@ -222,7 +222,7 @@
 .avatar.small {
   width: 29px;
   height: 29px;
-  font-size: 11px;
+  font-size: 12px;
 }
 .sidebar-profile > div {
   min-width: 0;
@@ -230,7 +230,7 @@
 }
 .sidebar-profile strong {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -240,7 +240,7 @@
   display: block;
   margin-top: 3px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 .app-body {
   margin-left: 228px;
@@ -259,7 +259,7 @@
   display: flex;
   align-items: center;
   gap: 13px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
 }
 .breadcrumb strong {
@@ -278,7 +278,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   white-space: nowrap;
 }
@@ -334,7 +334,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 .skip-link {
@@ -393,7 +393,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   margin: 0 0 24px;
   height: 39px;
@@ -445,7 +445,7 @@
 }
 .kpi > small {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.6;
 }
 .kpi-strip.three {
@@ -475,7 +475,7 @@
   font-weight: 600;
 }
 .panel-header p {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   margin: 5px 0 0;
 }
@@ -489,7 +489,7 @@
   padding: 20px 20px 0;
 }
 .chart-tabs button {
-  font-size: 12px;
+  font-size: 13px;
   border: 0;
   background: transparent;
   color: var(--muted);
@@ -505,7 +505,7 @@
 .chart-tabs > span {
   margin-left: auto;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 .activity-chart {
   height: 181px;
@@ -521,7 +521,7 @@
   align-items: center;
   gap: 6px;
   padding: 4px 7px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.2;
   border-radius: 4px;
   color: var(--muted);
@@ -578,7 +578,7 @@
 .replenish-list div > small {
   display: block;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 5px;
 }
 .replenish-list > a > span {
@@ -588,13 +588,13 @@
   font-variant-numeric: tabular-nums;
 }
 .replenish-list > a > span > small {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   display: block;
   margin-top: 2px;
 }
 .panel-footer-link {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   border-top: 1px solid var(--border);
   padding: 13px 20px;
@@ -623,7 +623,7 @@
   justify-content: space-between;
   gap: 10px;
   align-items: center;
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 8px;
 }
 .bar-label strong {
@@ -650,7 +650,7 @@
   border-radius: 8px;
   background: var(--raised);
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
 }
 .workspace-note > div {
   flex: 1;
@@ -694,7 +694,7 @@
   font-weight: 600;
 }
 .tabs button > span {
-  font-size: 11px;
+  font-size: 12px;
   padding: 1px 5px;
   border-radius: 4px;
   background: var(--raised);
@@ -743,7 +743,7 @@
 }
 .table-toolbar select {
   min-height: 40px;
-  font-size: 12px;
+  font-size: 13px;
   padding: 8px 27px 8px 11px;
 }
 .table-scroll {
@@ -757,7 +757,7 @@
   font-size: 13px;
 }
 .data-table th {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--muted);
   text-align: left;
@@ -787,7 +787,7 @@
 .data-table td small {
   display: block;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 5px;
   line-height: 1.4;
 }
@@ -844,7 +844,7 @@
   gap: 15px;
   padding: 18px 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
 }
 .pager > div {
   display: flex;
@@ -856,7 +856,7 @@
   background: var(--raised);
   padding: 12px 14px;
   border-radius: 7px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--muted);
   display: flex;
@@ -864,14 +864,14 @@
   gap: 9px;
 }
 .compact-table {
-  font-size: 12px;
+  font-size: 13px;
 }
 .compact-table td {
   padding: 13px 8px;
   height: 62px;
 }
 .compact-table th {
-  font-size: 11px;
+  font-size: 12px;
   padding: 9px 8px;
 }
 .compact-table td:first-child {
@@ -885,7 +885,7 @@
   text-overflow: ellipsis;
 }
 .compact-table .badge {
-  font-size: 11px;
+  font-size: 12px;
 }
 .entity-summary {
   display: flex;
@@ -915,7 +915,7 @@
   line-height: 1.6 !important;
 }
 .role-label {
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
 }
 .date-filters {
@@ -924,14 +924,14 @@
   gap: 12px;
 }
 .date-filters label {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   display: flex;
   align-items: center;
   gap: 7px;
 }
 .date-filters input {
-  font-size: 12px;
+  font-size: 13px;
   min-height: 40px;
   padding: 6px;
 }
@@ -1019,7 +1019,7 @@
   margin: 0 0 5px;
 }
 .settings-form > p {
-  font-size: 12px;
+  font-size: 13px;
 }
 .settings-save {
   display: flex;
@@ -1118,7 +1118,7 @@
   font-size: 14px;
 }
 .field > small {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.5;
   color: var(--muted);
 }
@@ -1152,7 +1152,7 @@
 }
 .form-note {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1205,7 +1205,7 @@
 }
 .stock-preview span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
 }
 .stock-preview strong {
   font-size: 24px;
@@ -1213,7 +1213,7 @@
   font-variant-numeric: tabular-nums;
 }
 .stock-preview small {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--muted);
 }
@@ -1341,7 +1341,7 @@
   border: 1px solid #c6dcd0;
   background: #f5faf6;
   border-radius: 8px;
-  font-size: 11px;
+  font-size: 12px;
   color: #365446;
 }
 .label-top {
@@ -1357,7 +1357,7 @@
   max-width: 440px;
 }
 .story-index {
-  font-size: 12px;
+  font-size: 13px;
   color: #4b6c59;
 }
 .story-copy h2 {
@@ -1380,7 +1380,7 @@
   justify-content: space-between;
   border-top: 1px solid #c4d8cb;
   padding-top: 20px;
-  font-size: 11px;
+  font-size: 12px;
   color: #4b6c59;
 }
 .login-main {
@@ -1392,7 +1392,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   gap: 15px;
 }
@@ -1403,7 +1403,7 @@
   padding: 55px 0;
 }
 .login-welcome {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--accent);
   font-weight: 500;
 }
@@ -1440,7 +1440,7 @@
   padding: 12px 17px !important;
 }
 .login-help {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -1452,14 +1452,14 @@
   padding-top: 24px;
   margin-top: 32px;
   border-top: 1px solid var(--border);
-  font-size: 12px;
+  font-size: 13px;
 }
 .login-support strong {
   font-weight: 500;
 }
 .login-support p {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
   margin: 7px 0 0;
 }
 .login-form-wrap .form-error {
@@ -1469,7 +1469,7 @@
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 @media (min-width: 1600px) {
@@ -1525,7 +1525,7 @@
     font-size: 14px;
   }
   .panel-header .text-link {
-    font-size: 11px;
+    font-size: 12px;
   }
   .kpi {
     padding: 0 16px;
@@ -1537,7 +1537,7 @@
     font-size: 24px;
   }
   .kpi small {
-    font-size: 11px;
+    font-size: 12px;
   }
   .replenish-list {
     padding-left: 16px;
@@ -1545,7 +1545,7 @@
   }
   .replenish-list strong {
     max-width: 185px;
-    font-size: 12px;
+    font-size: 13px;
   }
   .compact-table td:nth-child(4),
   .compact-table th:nth-child(4) {
@@ -1561,7 +1561,7 @@
     font-size: 24px;
   }
   .header-actions .button {
-    font-size: 12px;
+    font-size: 13px;
     padding: 8px 11px;
     min-height: 40px;
   }
@@ -1708,14 +1708,14 @@
     font-size: 31px;
   }
   .story-copy p {
-    font-size: 12px;
+    font-size: 13px;
   }
   .visual-label {
-    font-size: 11px;
+    font-size: 12px;
     padding: 8px;
   }
   .story-footer {
-    font-size: 11px;
+    font-size: 12px;
   }
   .story-footer > span:last-child {
     display: none;
@@ -1724,10 +1724,10 @@
     padding: 32px 26px;
   }
   .login-top {
-    font-size: 11px;
+    font-size: 12px;
   }
   .login-top .mini-status {
-    font-size: 11px;
+    font-size: 12px;
   }
   .login-footer {
     flex-direction: column;
@@ -1776,7 +1776,7 @@
   }
   .breadcrumb {
     gap: 9px;
-    font-size: 11px;
+    font-size: 12px;
   }
   .breadcrumb > span:first-of-type,
   .crumb-slash {
@@ -1823,7 +1823,7 @@
   }
   .overview-scope {
     margin-bottom: 0;
-    font-size: 11px;
+    font-size: 12px;
   }
   .overview-scope > span:last-child svg {
     display: none;
@@ -1843,10 +1843,10 @@
     font-size: 25px;
   }
   .kpi > span {
-    font-size: 12px;
+    font-size: 13px;
   }
   .kpi > small {
-    font-size: 11px;
+    font-size: 12px;
   }
   .dashboard-grid {
     gap: 18px;
@@ -1858,10 +1858,10 @@
     font-size: 15px;
   }
   .panel-header p {
-    font-size: 11px;
+    font-size: 12px;
   }
   .panel-header .text-link {
-    font-size: 11px;
+    font-size: 12px;
   }
   .activity-chart {
     height: 180px;
@@ -1910,16 +1910,16 @@
   }
   .compact-table strong {
     max-width: 185px;
-    font-size: 12px;
+    font-size: 13px;
   }
   .compact-table .badge {
-    font-size: 11px;
+    font-size: 12px;
   }
   .compact-table th {
-    font-size: 11px;
+    font-size: 12px;
   }
   .workspace-note {
-    font-size: 11px;
+    font-size: 12px;
     padding: 14px;
     gap: 9px;
   }
@@ -1927,13 +1927,13 @@
     display: none;
   }
   .workspace-note a {
-    font-size: 11px;
+    font-size: 12px;
   }
   .tabs {
     gap: 23px;
   }
   .tabs > button {
-    font-size: 12px;
+    font-size: 13px;
     min-height: 43px;
   }
   .table-toolbar {
@@ -1943,7 +1943,7 @@
     margin-bottom: 0;
   }
   .data-table {
-    font-size: 12px;
+    font-size: 13px;
     min-width: 620px;
   }
   .compact-table {
@@ -1956,12 +1956,12 @@
     padding: 14px 10px;
   }
   .data-table th {
-    font-size: 11px;
+    font-size: 12px;
   }
   .product-identity strong {
     min-width: 180px;
     max-width: 230px;
-    font-size: 12px;
+    font-size: 13px;
   }
   .product-symbol {
     width: 35px;
@@ -1975,7 +1975,7 @@
     gap: 9px;
   }
   .pager {
-    font-size: 11px;
+    font-size: 12px;
     gap: 8px;
   }
   .pager > div {
@@ -1986,7 +1986,7 @@
   }
   .table-hint {
     align-items: flex-start;
-    font-size: 11px;
+    font-size: 12px;
     padding: 12px;
     margin-top: 12px;
   }
@@ -1994,13 +1994,13 @@
     margin-top: 2px;
   }
   .app-footer {
-    font-size: 11px;
+    font-size: 12px;
     padding-top: 30px;
     gap: 7px;
     flex-wrap: wrap;
   }
   .app-footer span:last-child {
-    font-size: 11px;
+    font-size: 12px;
   }
   .date-filters label {
     flex-direction: row;
@@ -2008,7 +2008,7 @@
     gap: 5px;
   }
   .date-filters input {
-    font-size: 11px;
+    font-size: 12px;
     padding: 6px;
     min-width: 0;
   }
@@ -2066,7 +2066,7 @@
     grid-template-columns: 1fr;
   }
   .details {
-    font-size: 12px;
+    font-size: 13px;
     gap: 14px;
   }
   .modal {
@@ -2082,7 +2082,7 @@
     font-size: 19px;
   }
   .modal-header p {
-    font-size: 12px;
+    font-size: 13px;
   }
   .form-body {
     padding: 22px 20px;
@@ -2091,14 +2091,14 @@
     padding: 16px 20px;
   }
   .form-footer .button {
-    font-size: 12px;
+    font-size: 13px;
     padding: 9px 13px;
   }
   .form-grid {
     gap: 0 14px;
   }
   .field > span {
-    font-size: 12px;
+    font-size: 13px;
   }
   .field input,
   .field select,
@@ -2106,10 +2106,10 @@
     font-size: 16px;
   }
   .field > small {
-    font-size: 11px;
+    font-size: 12px;
   }
   .type-select > button {
-    font-size: 12px;
+    font-size: 13px;
     gap: 5px;
   }
   .stock-preview {
@@ -2117,7 +2117,7 @@
   }
   .toast {
     bottom: 15px;
-    font-size: 12px;
+    font-size: 13px;
     min-width: 280px;
   }
   .login-page {
@@ -2131,7 +2131,7 @@
     padding: 28px 25px 23px;
   }
   .login-top {
-    font-size: 12px;
+    font-size: 13px;
   }
   .login-top:before {
     content: "inventra";
@@ -2144,7 +2144,7 @@
     display: none;
   }
   .login-top .mini-status {
-    font-size: 11px;
+    font-size: 12px;
   }
   .login-form-wrap {
     max-width: 380px;
@@ -2168,11 +2168,11 @@
   }
   .login-footer {
     flex-direction: row;
-    font-size: 11px;
+    font-size: 12px;
     flex-wrap: wrap;
   }
   .login-support p {
-    font-size: 12px;
+    font-size: 13px;
   }
   .error-panel {
     flex-wrap: wrap;
@@ -2182,7 +2182,7 @@
     margin-left: 0;
   }
   .entity-summary {
-    font-size: 12px;
+    font-size: 13px;
   }
   .loading {
     padding: 80px 15px;
@@ -2194,7 +2194,7 @@
     padding-right: 14px;
   }
   .kpi > small {
-    font-size: 11px;
+    font-size: 12px;
   }
   .kpi.lead > strong {
     font-size: 25px;
@@ -2220,7 +2220,7 @@
     gap: 7px;
   }
   .header-actions .button {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media print {
@@ -2270,9 +2270,32 @@
     font-weight: 400;
   }
   .data-table {
-    font-size: 11px;
+    font-size: 12px;
   }
   .button {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .icon-button {
+    width: 44px;
+    height: 44px;
+  }
+  .chart-tabs button,
+  .button.compact,
+  .tabs > button {
+    min-height: 44px;
+  }
+  .topbar {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .topbar-actions {
+    gap: 0;
+  }
+  .search-field input,
+  .table-toolbar select {
+    min-height: 44px;
   }
 }

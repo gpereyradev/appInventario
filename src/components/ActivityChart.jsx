@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "../lib/charts";
 export default function ActivityChart({ activity }) {
   const ref = useRef(null);
-  const [metric, setMetric] = useState("entradas");
+  const [metric, setMetric] = useState("salidas");
   useEffect(() => {
     const el = ref.current;
     const draw = () =>

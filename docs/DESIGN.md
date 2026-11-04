@@ -29,3 +29,5 @@ La composición usa una hoja blanca sobre un marco verde gris, navegación neutr
 - Formulario de stock separado de la ficha del producto para conservar trazabilidad.
 
 Los 15 productos, 6 categorías, 3 proveedores y movimientos iniciales son datos de demostración, no un inventario importado del equipo local. Los proveedores de ejemplo usan dominios `.example`.
+
+La verificación visual se ejecutó a 1440, 768, 390 y 375 px. La sombra se reserva al aviso flotante; los guiones largos de las tablas indican ausencia de datos. Las tablas conservan el desplazamiento interno para comparar todas las columnas sin reducir el texto.
